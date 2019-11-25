@@ -13,3 +13,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
 }
+
+.Alexa-toggle p{
+    width: 80px;
+}
