@@ -17,21 +17,21 @@ import LectorQr from './views/LectorQr'
 
 function App() {
   return (
-    <Router>
-    <Navigation></Navigation>
+    <Router basename={window.location.pathname || ""}>
+      <div className="nav">
+      <Navigation></Navigation>
+      </div>
       <div className="container p-1 padre">
-        {/* <Route path="/" exact component={Login}/> */}
-
+        <Route path="/" exact component={Mapa}/>
         <Route path="/Notificaciones" component={Notificaciones}/>
         <Route path="/Alexa" component={Alexa}/>
         <Route path="/Historial" component={Historial}/>
         <Route path="/Historial1" component={Historial1}/>
         <Route path="/Historial2" component={Historial2}/>
         <Route path="/Historial3" component={Historial3}/>
-        <Route path="/mapa" component={Mapa} />
-        <Route path="/cargadores" component={TypePlugs} />
-        <Route path="/qr" component={LectorQr} />
-
+        <Route path="/Cargadores" component={TypePlugs} />
+        <Route path="/Qr" component={LectorQr} />
+        
       </div>
     </Router>
   )
